@@ -31,7 +31,7 @@ router.post('/register', (request, response) => {
         'name': name,
         'registered': false,
         'id': utils.randomBase64URLBuffer(),
-        'authenticators': []
+        'authenticators': ['internal']
     }
 
     let challengeMakeCred    = utils.generateServerMakeCredRequest(username, name, database[username].id)
